@@ -106,3 +106,8 @@ const Container = (props) => {
   );
 }
 
+// 3: Render the container component to the DOM
+ReactDOM.render(
+  <Container planets={ planets }/>,
+  document.getElementById('root')
+);
