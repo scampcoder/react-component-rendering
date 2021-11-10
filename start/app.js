@@ -94,12 +94,8 @@ const Container = (props) => {
     <div className="container">
       {props.planets.map( planet => 
         <Planet 
+          {...planet}//use spread operator so you don't have to expicitly state every prop
           key={planet.id} 
-          name={planet.name}
-          diameter={planet.diameter}
-          moons={planet.moons}
-          desc={planet.desc}
-          url={planet.url} 
         />
       )}
     </div> 
