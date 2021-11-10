@@ -87,3 +87,22 @@ const Planet = (props) => {
   );
 }
 
+// 2: Create a container component that iterates over the planets array 
+//    and renders a 'Planet' component for each object in the array 
+const Container = (props) => {
+  return (
+    <div className="container">
+      {props.planets.map( planet => 
+        <Planet 
+          id={planet.id} 
+          name={planet.name}
+          diameter={planet.diameter}
+          moons={planet.moons}
+          desc={planet.desc}
+          url={planet.url} 
+        />
+      )}
+    </div> 
+  );
+}
+
